@@ -6,7 +6,7 @@ import LikesButton from "./components/likesButton";
 import CommentList from "./components/CommentList";
 // import { render } from "@testing-library/react";
 
-const tags = ["拉比克", "屠夫", "赏金猎人", "拉比克", "屠夫", "赏金猎人"];
+const tags = ["拉比克", "屠夫", "赏金猎人", "拉比克", "屠夫", "赏金猎人3"];
 
 class App extends Component {
   constructor(props) {
