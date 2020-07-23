@@ -6,30 +6,30 @@ import LikesButton from "./components/likesButton";
 import CommentList from "./components/CommentList";
 // import { render } from "@testing-library/react";
 
-const tags = ["拉比克", "屠夫", "赏金猎人"];
+const tags = ["拉比克", "屠夫", "赏金猎人", "拉比克", "屠夫", "赏金猎人"];
 
 class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      comments: ["this is your first reply"]
+      comments: ["this is your first reply"],
     };
-    this.addComment = this.addComment.bind(this)
-    this.removeComment = this.removeComment.bind(this)
+    this.addComment = this.addComment.bind(this);
+    this.removeComment = this.removeComment.bind(this);
   }
 
   addComment(comment) {
     this.setState({
-      comments: [...this.state.comments, comment]
-    })
+      comments: [...this.state.comments, comment],
+    });
   }
 
   removeComment(index) {
-    let comments = [...this.state.comments]
-    comments.splice(index,1)
+    let comments = [...this.state.comments];
+    comments.splice(index, 1);
     this.setState({
-      comments: comments
-    })
+      comments: comments,
+    });
   }
 
   render() {
@@ -41,7 +41,7 @@ class App extends Component {
           commentsLength={comments.length}
           onAddComment={this.addComment}
         />
-        <CommentList comments={comments} onRemoveComment={this.removeComment}/>
+        <CommentList comments={comments} onRemoveComment={this.removeComment} />
         <header className="App-header">
           <img src={logo} className="App-logo" alt="logo" />
           <p>
